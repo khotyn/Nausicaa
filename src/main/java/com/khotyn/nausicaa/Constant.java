@@ -17,8 +17,18 @@ package com.khotyn.nausicaa;
  * 
  */
 public class Constant {
-    public static String FLICKR          = "flickr";
-    public static String YUPOO           = "yupoo";
-    public static String CONSUMER_KEY    = "0af00ad7924868076522b75aa05774db";
-    public static String OAUTH_SIGNATURE = "85ff1bfcd77120ce";
+    public static String FLICKR              = "flickr";
+    public static String YUPOO               = "yupoo";
+    public static String CONSUMER_KEY        = "0af00ad7924868076522b75aa05774db";
+    public static String OAUTH_SIGNATURE     = "85ff1bfcd77120ce";
+    public static String ACCESS_TOKEN_FILE   = System.getProperty("user.home") + "/.nausicaa/access.token.secret";
+    public static String SETTINGS_FILE       = System.getProperty("user.home") + "/.nausicaa/setttings.properties";
+    public static String BOUNDARY            = "---------------------------7d44e178b0434";
+    public static String NORMAL_PARAM_FORMAT = "--" + Constant.BOUNDARY + "\r\n" + "Content-Disposition: form-data; name=\"%s\"\r\n\r\n%s\r\n";
+    public static String PHOTO_PARAM_FORMAT  = "--"
+                                                     + Constant.BOUNDARY
+                                                     + "\r\n"
+                                                     + "Content-Disposition: form-data; name=\"photo\"; filename=\"%s\"\r\nContent-Type: image/jpeg\r\n\r\n";
+    public static byte[] BOTTOM              = ("\r\n--" + BOUNDARY + "--").getBytes();
+    public static String FLICKR_UPLOAD_API   = "http://api.flickr.com/services/upload/";
 }

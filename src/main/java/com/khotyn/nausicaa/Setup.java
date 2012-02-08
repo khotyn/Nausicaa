@@ -10,8 +10,11 @@
  */
 package com.khotyn.nausicaa;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 
+import org.apache.commons.io.FileUtils;
 import org.scribe.builder.ServiceBuilder;
 import org.scribe.model.Token;
 import org.scribe.model.Verifier;
@@ -62,7 +65,15 @@ public class Setup {
         Verifier verifier = new Verifier(in.nextLine());
         Token accessToken = service.getAccessToken(requestToken, verifier);
 
-        System.out.println(accessToken.getToken());
+        try {
+            FileUtils.writeStringToFile(new File(Constant.ACCESS_TOKEN_FILE), accessToken.getToken() + "," + accessToken.getSecret());
+            FileUtils.writeStringToFile(new File(Constant.SETTINGS_FILE), "");
+        } catch (IOException e) {
+            System.out.println("Error writing data to file!");
+            return;
+        }
+
+        System.out.println("Set up complete!");
     }
 
     /**
