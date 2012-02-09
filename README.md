@@ -6,7 +6,7 @@ Nausicaa is a command line tool to upload your photos to [Flickr](http://flickr.
 
 After uploading, you will get the static path of all sizes of the photo:
 
-![image](http://farm8.staticflickr.com/7025/6847064793_69d28fed0e_b.jpg)
+![image](http://farm8.staticflickr.com/7190/6847181395_efcfcd49ce_b.jpg)
 
 The name Nausicaa is from the character of [Hayao Miyazaki](http://en.wikipedia.org/wiki/Hayao_Miyazaki)'s famous animation [Nausicaa of the Valley of the Wind](http://en.wikipedia.org/wiki/Nausica%C3%A4_of_the_Valley_of_the_Wind_%28film%29).
 
