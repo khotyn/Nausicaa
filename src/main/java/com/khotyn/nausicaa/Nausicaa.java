@@ -251,6 +251,8 @@ public class Nausicaa {
                     } else if (paramValue[1].equalsIgnoreCase("other")) {
                         bodyParams.put(paramValue[0], String.valueOf(2));
                     }
+                } else if (paramValue[0].equalsIgnoreCase("tags")) {
+                    bodyParams.put(paramValue[0], paramValue[1].replace(',', ' '));
                 } else {
                     bodyParams.put(paramValue[0], paramValue[1]);
                 }
