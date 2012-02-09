@@ -34,8 +34,8 @@ Nausicaa provide some extra option, you can run `java -jar nausicaa.jar [path-to
 
 Here is the extra options provided:
 
-Key   | Comment 
------ | ------- 
+**Key**   | **Comment**
+----- | -------
 title | the title of the photo(Nausicaa will use the file name of the photo by default.).
 description | the description of the photo.
 tags  | the tags of the photo, multiple tags separated by commas.
